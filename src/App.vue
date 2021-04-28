@@ -9,6 +9,9 @@
         <label for="searchBox"></label>
       </div>
       <button @click="getXmlByProcessId">Go</button>
+      <div>
+        <button @click="create">Create New</button>
+      </div>
 
     </div>
     <div v-if="xml" class="bpmn-container">
@@ -60,8 +63,12 @@ export default {
       } catch (e) {
         console.log(e)
       }
-    }
+    },
+    create(){
+      this.xml = xml
+    },
   },
+
 }
 </script>
 
